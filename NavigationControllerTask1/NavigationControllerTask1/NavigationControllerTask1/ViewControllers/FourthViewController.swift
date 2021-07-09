@@ -17,7 +17,7 @@ class FourthViewController: UIViewController {
 
     }
     
-    @IBAction private func goToFifthVCYouchUpInside(_ sender: Any) {
+    @IBAction private func didPressedFifthVCButton(_ sender: Any) {
         
         let main = UIStoryboard(name: storyboardName, bundle: nil)
         
@@ -27,7 +27,7 @@ class FourthViewController: UIViewController {
         }
     }
     
-    @IBAction private func goToPrevScreenYouchUpInside(_ sender: Any) {
+    @IBAction private func didPressedPrevVCButton(_ sender: Any) {
         
         navigationController?.dismiss(animated: true, completion: nil)
     }

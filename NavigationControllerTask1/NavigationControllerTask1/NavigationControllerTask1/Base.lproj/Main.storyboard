@@ -87,7 +87,7 @@
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToPrevScreenYouchUpInside:" destination="0C4-oR-vF4" eventType="touchUpInside" id="KyM-WD-gNa"/>
+                                    <action selector="didPressedPrevVCButton:" destination="0C4-oR-vF4" eventType="touchUpInside" id="KyM-WD-gNa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -140,7 +140,7 @@
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToPrevScreenYouchUpInside:" destination="Jow-xs-sQs" eventType="touchUpInside" id="rB5-Pi-Rfm"/>
+                                    <action selector="didPressedPrevVCButton:" destination="Jow-xs-sQs" eventType="touchUpInside" id="rB5-Pi-Rfm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -175,7 +175,7 @@
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToPrevScreenYouchUpInside:" destination="dh6-o6-JJb" eventType="touchUpInside" id="D9j-NS-hIO"/>
+                                    <action selector="didPressedPrevVCButton:" destination="dh6-o6-JJb" eventType="touchUpInside" id="D9j-NS-hIO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxI-sZ-vX1">
@@ -188,7 +188,7 @@
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToFifthVCYouchUpInside:" destination="dh6-o6-JJb" eventType="touchUpInside" id="4du-Dt-A4v"/>
+                                    <action selector="didPressedFifthVCButton:" destination="dh6-o6-JJb" eventType="touchUpInside" id="4du-Dt-A4v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -227,7 +227,7 @@
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToPrevScreenYouchUpInside:" destination="FYI-gJ-gRv" eventType="touchUpInside" id="TEl-iw-dI6"/>
+                                    <action selector="didPressedPrevVCButton:" destination="FYI-gJ-gRv" eventType="touchUpInside" id="TEl-iw-dI6"/>
                                 </connections>
                             </button>
                         </subviews>

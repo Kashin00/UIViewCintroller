@@ -14,7 +14,7 @@ class ThirdViewController: UIViewController {
 
     }
     
-    @IBAction private func goToPrevScreenYouchUpInside(_ sender: Any) {
+    @IBAction private func didPressedPrevVCButton(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
     }

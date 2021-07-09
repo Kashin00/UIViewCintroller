@@ -14,7 +14,7 @@ class SecondViewController: UIViewController {
 
     }
     
-    @IBAction private func goToPrevScreenYouchUpInside(_ sender: Any) {
+    @IBAction private func didPressedPrevVCButton(_ sender: Any) {
         
         navigationController?.popViewController(animated: true)
     }
