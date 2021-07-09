@@ -67,10 +67,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81Z-JK-yoc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81Z-JK-yoc">
                                 <rect key="frame" x="107" y="730" width="201" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.38742897727272729" green="0.24456443633610409" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="TuB-b6-sF1"/>
+                                </constraints>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
@@ -81,6 +83,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XAD-nR-cqp"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="81Z-JK-yoc" firstAttribute="leading" secondItem="XAD-nR-cqp" secondAttribute="leading" constant="107" id="a9D-Un-ASF"/>
+                            <constraint firstItem="XAD-nR-cqp" firstAttribute="trailing" secondItem="81Z-JK-yoc" secondAttribute="trailing" constant="106" id="bb6-6W-Jea"/>
+                            <constraint firstItem="XAD-nR-cqp" firstAttribute="bottom" secondItem="81Z-JK-yoc" secondAttribute="bottom" constant="46" id="tQy-8n-kGj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xR-Kb-hyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,10 +120,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNU-Nh-xrt">
-                                <rect key="frame" x="107" y="726" width="201" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNU-Nh-xrt">
+                                <rect key="frame" x="107" y="730" width="201" height="86"/>
                                 <color key="backgroundColor" red="0.38742897729999998" green="0.24456443629999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="dzj-dP-UBH"/>
+                                </constraints>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
@@ -127,6 +136,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rBH-Gq-cfP"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="JNU-Nh-xrt" firstAttribute="leading" secondItem="rBH-Gq-cfP" secondAttribute="leading" constant="107" id="4mf-4E-2xS"/>
+                            <constraint firstItem="rBH-Gq-cfP" firstAttribute="trailing" secondItem="JNU-Nh-xrt" secondAttribute="trailing" constant="106" id="L4z-Cx-vIT"/>
+                            <constraint firstItem="rBH-Gq-cfP" firstAttribute="bottom" secondItem="JNU-Nh-xrt" secondAttribute="bottom" constant="46" id="Ogq-u1-nll"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiY-X5-Nws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,10 +155,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra7-Ln-Iy3">
-                                <rect key="frame" x="107" y="727" width="201" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ra7-Ln-Iy3">
+                                <rect key="frame" x="107" y="730" width="201" height="86"/>
                                 <color key="backgroundColor" red="0.38742897729999998" green="0.24456443629999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="vTK-NK-4Kk"/>
+                                </constraints>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
@@ -152,27 +168,36 @@
                                     <action selector="goToPrevScreenYouchUpInside:" destination="dh6-o6-JJb" eventType="touchUpInside" id="D9j-NS-hIO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxI-sZ-vX1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxI-sZ-vX1">
                                 <rect key="frame" x="107" y="405" width="201" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.38742897729999998" green="0.24456443629999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Uq4-3h-rSW"/>
+                                </constraints>
                                 <state key="normal" title="PushVC5">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="goToFifthVCYouchUpInside:" destination="dh6-o6-JJb" eventType="touchUpInside" id="4du-Dt-A4v"/>
-                                    <action selector="goToPrevScreenYouchUpInside:" destination="dh6-o6-JJb" eventType="touchUpInside" id="vCA-i6-UmG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gkc-tT-tbt"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="Gkc-tT-tbt" firstAttribute="bottom" secondItem="Ra7-Ln-Iy3" secondAttribute="bottom" constant="46" id="4Bk-41-gSn"/>
+                            <constraint firstItem="YxI-sZ-vX1" firstAttribute="centerY" secondItem="xIs-3E-xt2" secondAttribute="centerY" id="4VU-Jy-WPl"/>
+                            <constraint firstItem="YxI-sZ-vX1" firstAttribute="leading" secondItem="Gkc-tT-tbt" secondAttribute="leading" constant="107" id="6HA-cV-taN"/>
+                            <constraint firstItem="Ra7-Ln-Iy3" firstAttribute="leading" secondItem="Gkc-tT-tbt" secondAttribute="leading" constant="107" id="Dq5-Y1-lXG"/>
+                            <constraint firstItem="Gkc-tT-tbt" firstAttribute="trailing" secondItem="Ra7-Ln-Iy3" secondAttribute="trailing" constant="106" id="R3L-ni-J2d"/>
+                            <constraint firstItem="Gkc-tT-tbt" firstAttribute="trailing" secondItem="YxI-sZ-vX1" secondAttribute="trailing" constant="106" id="mba-hk-U3b"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="knp-J9-4HP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKd-32-moE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="697" y="763"/>
+            <point key="canvasLocation" x="695.6521739130435" y="762.72321428571422"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="wyG-Lt-9UQ">
@@ -182,10 +207,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwK-uN-Mmz">
-                                <rect key="frame" x="107" y="733" width="201" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwK-uN-Mmz">
+                                <rect key="frame" x="107" y="730" width="201" height="86"/>
                                 <color key="backgroundColor" red="0.38742897729999998" green="0.24456443629999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="TnM-ng-kjx"/>
+                                </constraints>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                 </state>
@@ -196,6 +223,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iMy-Lf-5KY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="iMy-Lf-5KY" firstAttribute="trailing" secondItem="wwK-uN-Mmz" secondAttribute="trailing" constant="106" id="4v6-Yq-est"/>
+                            <constraint firstItem="wwK-uN-Mmz" firstAttribute="leading" secondItem="iMy-Lf-5KY" secondAttribute="leading" constant="107" id="DRi-LQ-NcT"/>
+                            <constraint firstItem="iMy-Lf-5KY" firstAttribute="bottom" secondItem="wwK-uN-Mmz" secondAttribute="bottom" constant="46" id="Dx3-ec-0Pq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f09-Cu-JEy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
