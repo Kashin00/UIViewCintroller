@@ -11,10 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-    @IBAction func goToSecondVCTouchUpInside(_ sender: Any) {
+    @IBAction private func goToSecondVCTouchUpInside(_ sender: Any) {
         
         let main = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = main.instantiateViewController(identifier: "SecondVC") as! SecondViewController
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
       
     }
     
-    @IBAction func goToThirdVCTouchUpInside(_ sender: Any) {
+    @IBAction private func goToThirdVCTouchUpInside(_ sender: Any) {
         
         let main = UIStoryboard(name: "Main", bundle: nil)
         let thirdVC = main.instantiateViewController(identifier: "ThirdVC") as! ThirdViewController
@@ -33,14 +33,12 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func goToFourthVCTouchUoInside(_ sender: Any) {
+    @IBAction private func goToFourthVCTouchUoInside(_ sender: Any) {
         
-        
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let fourthVC = main.instantiateViewController(identifier: "FourthVC") as! FourthViewController
-//        navigationController?.pushViewController(fourthVC, animated: true)
-        present(fourthVC, animated: true, completion: nil)
-        
+        let fourthVC = storyboard?.instantiateViewController(identifier: "FourthVC") as! FourthViewController
+        let navController = UINavigationController(rootViewController: fourthVC)
+        navController.modalPresentationStyle = .fullScreen
+        navigationController?.present(navController, animated: true, completion: nil)
     }
 }
 

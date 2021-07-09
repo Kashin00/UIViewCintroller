@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKd-32-moE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="762.72321428571422"/>
+            <point key="canvasLocation" x="697" y="763"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="wyG-Lt-9UQ">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f09-Cu-JEy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2405.7971014492755" y="762.72321428571422"/>
+            <point key="canvasLocation" x="1496" y="763"/>
         </scene>
     </scenes>
     <resources>

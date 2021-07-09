@@ -14,8 +14,8 @@ class FifthViewController: UIViewController {
         
     }
     
-    @IBAction func goToPrevScreenYouchUpInside(_ sender: Any) {
+    @IBAction private func goToPrevScreenYouchUpInside(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }

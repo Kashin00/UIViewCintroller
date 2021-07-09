@@ -14,16 +14,15 @@ class FourthViewController: UIViewController {
 
     }
     
-    @IBAction func goToFifthVCYouchUpInside(_ sender: Any) {
+    @IBAction private func goToFifthVCYouchUpInside(_ sender: Any) {
         
         let main = UIStoryboard(name: "Main", bundle: nil)
-        let fifthVC = main.instantiateViewController(identifier: "FifthVC") as! FifthViewController
-        present(fifthVC, animated: true, completion: nil)
-        
+        let fiveViewController = main.instantiateViewController(identifier: "FifthVC") as! FifthViewController
+        navigationController?.pushViewController(fiveViewController, animated: true)
     }
     
-    @IBAction func goToPrevScreenYouchUpInside(_ sender: Any) {
+    @IBAction private func goToPrevScreenYouchUpInside(_ sender: Any) {
         
-        dismiss(animated: true, completion: nil)
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 }
