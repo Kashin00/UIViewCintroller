@@ -13,6 +13,10 @@
 		BA5BFC5126984C0F00AB4AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5BFC4F26984C0F00AB4AFB /* Main.storyboard */; };
 		BA5BFC5326984C1000AB4AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5BFC5226984C1000AB4AFB /* Assets.xcassets */; };
 		BA5BFC5626984C1000AB4AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA5BFC5426984C1000AB4AFB /* LaunchScreen.storyboard */; };
+		BA5BFC5F26984D7F00AB4AFB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BFC5E26984D7F00AB4AFB /* SecondViewController.swift */; };
+		BA5BFC6726984DDA00AB4AFB /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BFC6626984DDA00AB4AFB /* ThirdViewController.swift */; };
+		BA5BFC6A26984DF000AB4AFB /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BFC6926984DF000AB4AFB /* FourthViewController.swift */; };
+		BA5BFC6D26984DF700AB4AFB /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BFC6C26984DF700AB4AFB /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BA5BFC5226984C1000AB4AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA5BFC5526984C1000AB4AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA5BFC5726984C1000AB4AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA5BFC5E26984D7F00AB4AFB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BA5BFC6626984DDA00AB4AFB /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		BA5BFC6926984DF000AB4AFB /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		BA5BFC6C26984DF700AB4AFB /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,25 @@
 			children = (
 				BA5BFC4926984C0F00AB4AFB /* AppDelegate.swift */,
 				BA5BFC4B26984C0F00AB4AFB /* SceneDelegate.swift */,
-				BA5BFC4D26984C0F00AB4AFB /* ViewController.swift */,
 				BA5BFC4F26984C0F00AB4AFB /* Main.storyboard */,
+				BA5BFC6226984DB800AB4AFB /* ViewControllers */,
 				BA5BFC5226984C1000AB4AFB /* Assets.xcassets */,
 				BA5BFC5426984C1000AB4AFB /* LaunchScreen.storyboard */,
 				BA5BFC5726984C1000AB4AFB /* Info.plist */,
 			);
 			path = NavigationControllerTask1;
+			sourceTree = "<group>";
+		};
+		BA5BFC6226984DB800AB4AFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA5BFC4D26984C0F00AB4AFB /* ViewController.swift */,
+				BA5BFC5E26984D7F00AB4AFB /* SecondViewController.swift */,
+				BA5BFC6626984DDA00AB4AFB /* ThirdViewController.swift */,
+				BA5BFC6926984DF000AB4AFB /* FourthViewController.swift */,
+				BA5BFC6C26984DF700AB4AFB /* FifthViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5BFC6A26984DF000AB4AFB /* FourthViewController.swift in Sources */,
+				BA5BFC5F26984D7F00AB4AFB /* SecondViewController.swift in Sources */,
 				BA5BFC4E26984C0F00AB4AFB /* ViewController.swift in Sources */,
+				BA5BFC6726984DDA00AB4AFB /* ThirdViewController.swift in Sources */,
 				BA5BFC4A26984C0F00AB4AFB /* AppDelegate.swift in Sources */,
 				BA5BFC4C26984C0F00AB4AFB /* SceneDelegate.swift in Sources */,
+				BA5BFC6D26984DF700AB4AFB /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
