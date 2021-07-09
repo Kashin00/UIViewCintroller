@@ -16,42 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N79-PL-YdG">
-                                <rect key="frame" x="145" y="198" width="124" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Push VC2">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToSecondVCTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oEy-Rv-pn7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-yb-WUC">
-                                <rect key="frame" x="145" y="416" width="124" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Modal VC3">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToThirdVCTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGk-zh-Qwa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv6-hm-9T5">
-                                <rect key="frame" x="145" y="645" width="124" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <state key="normal" title="Modal VC4">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToFourthVCTouchUoInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGZ-CD-6pw"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="EQX-To-ZWE">
+                                <rect key="frame" x="147" y="303" width="120" height="290"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N79-PL-YdG">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Push VC2">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressedSecondVCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oEy-Rv-pn7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRo-yb-WUC">
+                                        <rect key="frame" x="0.0" y="130" width="120" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Modal VC3">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressedThirdVCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGk-zh-Qwa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pv6-hm-9T5">
+                                        <rect key="frame" x="0.0" y="260" width="120" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <state key="normal" title="Modal VC4">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressedFourthVCButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tGZ-CD-6pw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="F7M-Ck-JZg"/>
+                                    <constraint firstAttribute="width" constant="120" id="IIz-iq-BFH"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="EQX-To-ZWE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CaZ-RG-4v2"/>
+                            <constraint firstItem="EQX-To-ZWE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wlL-fk-ntb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1r7-U3-7Tb"/>
                 </viewController>

@@ -9,36 +9,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let main = UIStoryboard(name: "Main", bundle: nil)
+    private let secondVCIdentifier = "SecondVC"
+    private let thirdVCIdentidier = "ThirdVC"
+    private let fourthVCIdentifier = "FourthVC"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-    @IBAction private func goToSecondVCTouchUpInside(_ sender: Any) {
+    @IBAction private func didPressedSecondVCButton(_ sender: Any) {
         
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = main.instantiateViewController(identifier: "SecondVC") as! SecondViewController
-        
-        self.navigationController?.pushViewController(secondVC, animated: true)
-        
-      
+        if let secondVC = main.instantiateViewController(identifier: secondVCIdentifier) as? SecondViewController {
+            self.navigationController?.pushViewController(secondVC, animated: true)
+        }
     }
     
-    @IBAction private func goToThirdVCTouchUpInside(_ sender: Any) {
+    @IBAction private func didPressedThirdVCButton(_ sender: Any) {
         
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let thirdVC = main.instantiateViewController(identifier: "ThirdVC") as! ThirdViewController
-                
-        present(thirdVC, animated: true, completion: nil)
+        if let thirdVC = main.instantiateViewController(identifier: thirdVCIdentidier) as?  ThirdViewController {
+            present(thirdVC, animated: true, completion: nil)
+        }
     }
     
     
-    @IBAction private func goToFourthVCTouchUoInside(_ sender: Any) {
+    @IBAction private func didPressedFourthVCButton(_ sender: Any) {
         
-        let fourthVC = storyboard?.instantiateViewController(identifier: "FourthVC") as! FourthViewController
-        let navController = UINavigationController(rootViewController: fourthVC)
-        navController.modalPresentationStyle = .fullScreen
-        navigationController?.present(navController, animated: true, completion: nil)
+        if let fourthVC = storyboard?.instantiateViewController(identifier: fourthVCIdentifier) as? FourthViewController {
+            
+            let navController = UINavigationController(rootViewController: fourthVC)
+            navController.modalPresentationStyle = .fullScreen
+            navigationController?.present(navController, animated: true, completion: nil)
+        }
     }
 }
 

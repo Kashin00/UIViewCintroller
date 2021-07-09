@@ -9,6 +9,9 @@ import UIKit
 
 class FourthViewController: UIViewController {
 
+    private let identifier = "FifthVC"
+    private let storyboardName = "Main"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,9 +19,12 @@ class FourthViewController: UIViewController {
     
     @IBAction private func goToFifthVCYouchUpInside(_ sender: Any) {
         
-        let main = UIStoryboard(name: "Main", bundle: nil)
-        let fiveViewController = main.instantiateViewController(identifier: "FifthVC") as! FifthViewController
-        navigationController?.pushViewController(fiveViewController, animated: true)
+        let main = UIStoryboard(name: storyboardName, bundle: nil)
+        
+        if let fiveViewController = main.instantiateViewController(identifier: identifier) as? FifthViewController {
+            
+            navigationController?.pushViewController(fiveViewController, animated: true)
+        }
     }
     
     @IBAction private func goToPrevScreenYouchUpInside(_ sender: Any) {
