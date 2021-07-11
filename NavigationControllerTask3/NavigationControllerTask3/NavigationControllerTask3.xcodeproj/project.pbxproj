@@ -13,6 +13,10 @@
 		BA434147269B7F9200A03819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA434145269B7F9200A03819 /* Main.storyboard */; };
 		BA434149269B7F9300A03819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA434148269B7F9300A03819 /* Assets.xcassets */; };
 		BA43414C269B7F9300A03819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA43414A269B7F9300A03819 /* LaunchScreen.storyboard */; };
+		BA434155269B826E00A03819 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA434154269B826E00A03819 /* SecondViewController.swift */; };
+		BA434158269B827400A03819 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA434157269B827400A03819 /* ThirdViewController.swift */; };
+		BA43415B269B827A00A03819 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43415A269B827A00A03819 /* FourthViewController.swift */; };
+		BA434183269B8EF300A03819 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA434182269B8EF300A03819 /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		BA434148269B7F9300A03819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA43414B269B7F9300A03819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA43414D269B7F9300A03819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA434154269B826E00A03819 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BA434157269B827400A03819 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		BA43415A269B827A00A03819 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		BA434182269B8EF300A03819 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,25 @@
 			children = (
 				BA43413F269B7F9200A03819 /* AppDelegate.swift */,
 				BA434141269B7F9200A03819 /* SceneDelegate.swift */,
-				BA434143269B7F9200A03819 /* ViewController.swift */,
+				BA434186269B916E00A03819 /* ViewController */,
 				BA434145269B7F9200A03819 /* Main.storyboard */,
 				BA434148269B7F9300A03819 /* Assets.xcassets */,
 				BA43414A269B7F9300A03819 /* LaunchScreen.storyboard */,
 				BA43414D269B7F9300A03819 /* Info.plist */,
 			);
 			path = NavigationControllerTask3;
+			sourceTree = "<group>";
+		};
+		BA434186269B916E00A03819 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA434143269B7F9200A03819 /* ViewController.swift */,
+				BA434154269B826E00A03819 /* SecondViewController.swift */,
+				BA434157269B827400A03819 /* ThirdViewController.swift */,
+				BA43415A269B827A00A03819 /* FourthViewController.swift */,
+				BA434182269B8EF300A03819 /* FifthViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA43415B269B827A00A03819 /* FourthViewController.swift in Sources */,
+				BA434155269B826E00A03819 /* SecondViewController.swift in Sources */,
 				BA434144269B7F9200A03819 /* ViewController.swift in Sources */,
+				BA434158269B827400A03819 /* ThirdViewController.swift in Sources */,
 				BA434140269B7F9200A03819 /* AppDelegate.swift in Sources */,
 				BA434142269B7F9200A03819 /* SceneDelegate.swift in Sources */,
+				BA434183269B8EF300A03819 /* FifthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
