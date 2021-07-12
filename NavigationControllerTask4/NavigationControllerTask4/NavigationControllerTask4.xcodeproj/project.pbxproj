@@ -13,6 +13,7 @@
 		BAE5DFB9269C240A00DE0C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE5DFB7269C240A00DE0C2C /* Main.storyboard */; };
 		BAE5DFBB269C240B00DE0C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE5DFBA269C240B00DE0C2C /* Assets.xcassets */; };
 		BAE5DFBE269C240B00DE0C2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE5DFBC269C240B00DE0C2C /* LaunchScreen.storyboard */; };
+		BAE5DFEF269C499B00DE0C2C /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5DFEE269C499B00DE0C2C /* Messages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BAE5DFBA269C240B00DE0C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE5DFBD269C240B00DE0C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE5DFBF269C240B00DE0C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE5DFEE269C499B00DE0C2C /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BAE5DFB1269C240900DE0C2C /* AppDelegate.swift */,
 				BAE5DFB3269C240900DE0C2C /* SceneDelegate.swift */,
 				BAE5DFB5269C240A00DE0C2C /* ViewController.swift */,
+				BAE5DFEE269C499B00DE0C2C /* Messages.swift */,
 				BAE5DFB7269C240A00DE0C2C /* Main.storyboard */,
 				BAE5DFBA269C240B00DE0C2C /* Assets.xcassets */,
 				BAE5DFBC269C240B00DE0C2C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE5DFB6269C240A00DE0C2C /* ViewController.swift in Sources */,
+				BAE5DFEF269C499B00DE0C2C /* Messages.swift in Sources */,
 				BAE5DFB2269C240900DE0C2C /* AppDelegate.swift in Sources */,
 				BAE5DFB4269C240900DE0C2C /* SceneDelegate.swift in Sources */,
 			);

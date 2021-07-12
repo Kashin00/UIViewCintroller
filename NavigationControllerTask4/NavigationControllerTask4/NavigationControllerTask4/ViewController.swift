@@ -8,53 +8,70 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private let message = UserMessages()
+    private let singOutMessage = UserMessages.SingOut()
+    private let actionSheetMessage = UserMessages.ActionSheet()
+    private let textFieldMessage = UserMessages.TextField()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     @IBAction func didPressedSimpleAlertButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Sing out?",
-                                      message: "You can always access your content by signing back in",
+        
+        let alert = UIAlertController(title: singOutMessage.title,
+                                      message: singOutMessage.message,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sing out", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: message.cancelTitle, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: message.singOutTitle, style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     
     }
     
     @IBAction func didPressedSimpleActionSheetButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Title", message: "Please, select an option", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Approve", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Edit", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+        
+        let alert = UIAlertController(title: actionSheetMessage.title,
+                                      message: actionSheetMessage.message,
+                                      preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: message.approveTitle, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: message.editTitle, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: message.deleteTitle, style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: message.dismissTitle, style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
     @IBAction func didPressedAlertWithDistractiveButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Title", message: "Please, select an option", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sing out", style: .destructive, handler: nil))
+        
+        let alert = UIAlertController(title: actionSheetMessage.title,
+                                      message: actionSheetMessage.message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: message.cancelTitle, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: message.singOutTitle, style: .destructive, handler: nil))
         present(alert, animated: true, completion: nil)
         
     }
     
     @IBAction func didPressedAlertWithMoreButtons(_ sender: Any) {
-        let alert = UIAlertController(title: "Title", message: "Please, select an option", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sing out", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Destructive", style: .destructive, handler: nil))
+        
+        let alert = UIAlertController(title: actionSheetMessage.title,
+                                      message: actionSheetMessage.message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: message.cancelTitle, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: message.singOutTitle, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: message.dismissTitle, style: .destructive, handler: nil))
         present(alert, animated: true, completion: nil)
         
     }
     
     @IBAction func didPressedAlertWithUITextField(_ sender: Any) {
         
-        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
+        let alert = UIAlertController(title: textFieldMessage.title,
+                                      message: textFieldMessage.message,
+                                      preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: message.cancelTitle, style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }
