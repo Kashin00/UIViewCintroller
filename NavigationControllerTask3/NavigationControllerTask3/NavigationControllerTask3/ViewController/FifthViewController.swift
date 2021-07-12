@@ -12,13 +12,10 @@ class FifthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func didPressedButton(_ sender: Any) {
         
         navigationController?.popViewController(animated: true)
     }
-    
 }

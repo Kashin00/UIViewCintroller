@@ -8,20 +8,15 @@
 import UIKit
 
 class FourthViewController: UIViewController {
-
-    private let main = UIStoryboard(name: "Main", bundle: nil)
-    private let fifthVCIdentifier = "fifthVC"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
-    @IBAction func didPressedPushVC(_ sender: Any) {
+    @IBAction func didPressedPushVC(_ sender: Any) {       
         
-        if let fifthVC = main.instantiateViewController(identifier: fifthVCIdentifier) as? FifthViewController {
-            
-            self.navigationController?.pushViewController(fifthVC, animated: true)
-        }
+        guard let fifthVC = storyboard?.instantiateViewController(identifier: String(describing: FifthViewController.self)) as? FifthViewController else { return }
+        
+        navigationController?.pushViewController(fifthVC, animated: true)
     }
 }

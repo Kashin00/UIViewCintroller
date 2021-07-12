@@ -47,7 +47,7 @@
         <!--Third View Controller-->
         <scene sceneID="G5V-WF-iJy">
             <objects>
-                <viewController storyboardIdentifier="thirdVC" id="G7e-C7-B5f" customClass="ThirdViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="G7e-C7-B5f" customClass="ThirdViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="alt-On-BZG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--Second View Controller-->
         <scene sceneID="jQR-Oq-0GG">
             <objects>
-                <viewController storyboardIdentifier="secondVC" id="SBa-LX-IEW" customClass="SecondViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="SBa-LX-IEW" customClass="SecondViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WNl-NV-h8f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
         <!--Fourth View Controller-->
         <scene sceneID="gKp-ay-Psh">
             <objects>
-                <viewController id="BzV-H8-d2s" customClass="FourthViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FourthViewController" id="BzV-H8-d2s" customClass="FourthViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GAj-LZ-PAR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +127,7 @@
         <!--Fifth View Controller-->
         <scene sceneID="WaQ-Xd-vAc">
             <objects>
-                <viewController storyboardIdentifier="fifthVC" id="yjF-8R-Ly3" customClass="FifthViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FifthViewController" id="yjF-8R-Ly3" customClass="FifthViewController" customModule="NavigationControllerTask3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVs-cN-xLH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +157,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7p5-V0-q3x" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="45u-rk-i92">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -8,10 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    private let main = UIStoryboard(name: "Main", bundle: nil)
-    private let secondVCIdentifier = "secondVC"
-    private let thirdVCIdentifier = "thirdVC"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +16,16 @@ class ViewController: UIViewController {
 
     @IBAction func didPressedPushVC(_ sender: Any) {
         
-        if let secondVC = main.instantiateViewController(identifier: secondVCIdentifier) as? SecondViewController {
-            
-            self.navigationController?.pushViewController(secondVC, animated: true)
-        }
-         
+        guard let secondVC = storyboard?.instantiateViewController(identifier: String(describing: SecondViewController.self)) as? SecondViewController else { return }
+        
+        navigationController?.pushViewController(secondVC, animated: true)
     }
     
     @IBAction func didPressedModalVC(_ sender: Any) {
         
-        if let thirdVC = main.instantiateViewController(identifier: thirdVCIdentifier) as? ThirdViewController {
-            
-            self.navigationController?.present(thirdVC, animated: true)
-        }
+        guard let thirdVC = storyboard?.instantiateViewController(identifier: String(describing: ThirdViewController.self)) as? ThirdViewController else { return }
+        
+        navigationController?.present(thirdVC, animated: true)
     }
     
     
