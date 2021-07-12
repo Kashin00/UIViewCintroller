@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA3177EE269CDA83003C0875 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3177ED269CDA83003C0875 /* UserMessage.swift */; };
+		BA3177F8269CDD3E003C0875 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3177F6269CDD3E003C0875 /* DeviceInfoViewController.swift */; };
+		BA3177F9269CDD3E003C0875 /* DeviceInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3177F7269CDD3E003C0875 /* DeviceInfoViewController.xib */; };
 		BAE5E000269C6E4F00DE0C2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5DFFF269C6E4F00DE0C2C /* AppDelegate.swift */; };
 		BAE5E002269C6E4F00DE0C2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E001269C6E4F00DE0C2C /* SceneDelegate.swift */; };
 		BAE5E007269C6E4F00DE0C2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E005269C6E4F00DE0C2C /* Main.storyboard */; };
 		BAE5E009269C6E5100DE0C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E008269C6E5100DE0C2C /* Assets.xcassets */; };
 		BAE5E00C269C6E5100DE0C2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E00A269C6E5100DE0C2C /* LaunchScreen.storyboard */; };
 		BAE5E015269C6EBE00DE0C2C /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E014269C6EBE00DE0C2C /* Device.swift */; };
-		BAE5E019269C74EB00DE0C2C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E017269C74EB00DE0C2C /* FirstViewController.swift */; };
-		BAE5E01A269C74EB00DE0C2C /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E018269C74EB00DE0C2C /* FirstViewController.xib */; };
-		BAE5E01E269C74FB00DE0C2C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E01C269C74FB00DE0C2C /* SecondViewController.swift */; };
-		BAE5E01F269C74FB00DE0C2C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E01D269C74FB00DE0C2C /* SecondViewController.xib */; };
+		BAE5E02A269C766100DE0C2C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E029269C766100DE0C2C /* FirstViewController.swift */; };
+		BAE5E02D269C766A00DE0C2C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E02C269C766A00DE0C2C /* SecondViewController.swift */; };
+		BAE5E031269C770700DE0C2C /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E02F269C770700DE0C2C /* FirstTableViewCell.swift */; };
+		BAE5E032269C770700DE0C2C /* FirstTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E030269C770700DE0C2C /* FirstTableViewCell.xib */; };
+		BAE5E036269C771C00DE0C2C /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E034269C771C00DE0C2C /* SecondTableViewCell.swift */; };
+		BAE5E037269C771C00DE0C2C /* SecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE5E035269C771C00DE0C2C /* SecondTableViewCell.xib */; };
+		BAE5E03A269C7A9C00DE0C2C /* DevicesArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E039269C7A9C00DE0C2C /* DevicesArrays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA3177ED269CDA83003C0875 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
+		BA3177F6269CDD3E003C0875 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
+		BA3177F7269CDD3E003C0875 /* DeviceInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceInfoViewController.xib; sourceTree = "<group>"; };
 		BAE5DFFC269C6E4F00DE0C2C /* Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Controller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE5DFFF269C6E4F00DE0C2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE5E001269C6E4F00DE0C2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,10 +37,13 @@
 		BAE5E00B269C6E5100DE0C2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE5E00D269C6E5100DE0C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAE5E014269C6EBE00DE0C2C /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		BAE5E017269C74EB00DE0C2C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BAE5E018269C74EB00DE0C2C /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
-		BAE5E01C269C74FB00DE0C2C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		BAE5E01D269C74FB00DE0C2C /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		BAE5E029269C766100DE0C2C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		BAE5E02C269C766A00DE0C2C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BAE5E02F269C770700DE0C2C /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		BAE5E030269C770700DE0C2C /* FirstTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTableViewCell.xib; sourceTree = "<group>"; };
+		BAE5E034269C771C00DE0C2C /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		BAE5E035269C771C00DE0C2C /* SecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTableViewCell.xib; sourceTree = "<group>"; };
+		BAE5E039269C7A9C00DE0C2C /* DevicesArrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesArrays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA3177E0269C9B7D003C0875 /* DeviceInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA3177F6269CDD3E003C0875 /* DeviceInfoViewController.swift */,
+				BA3177F7269CDD3E003C0875 /* DeviceInfoViewController.xib */,
+			);
+			path = DeviceInfoViewController;
+			sourceTree = "<group>";
+		};
 		BAE5DFF3269C6E4F00DE0C2C = {
 			isa = PBXGroup;
 			children = (
@@ -66,11 +87,12 @@
 			children = (
 				BAE5DFFF269C6E4F00DE0C2C /* AppDelegate.swift */,
 				BAE5E001269C6E4F00DE0C2C /* SceneDelegate.swift */,
+				BAE5E005269C6E4F00DE0C2C /* Main.storyboard */,
 				BAE5E021269C750300DE0C2C /* FirstViewController */,
 				BAE5E023269C751400DE0C2C /* SecondViewController */,
+				BA3177E0269C9B7D003C0875 /* DeviceInfoViewController */,
 				BAE5E026269C754000DE0C2C /* Model */,
 				BAE5E008269C6E5100DE0C2C /* Assets.xcassets */,
-				BAE5E005269C6E4F00DE0C2C /* Main.storyboard */,
 				BAE5E00A269C6E5100DE0C2C /* LaunchScreen.storyboard */,
 				BAE5E00D269C6E5100DE0C2C /* Info.plist */,
 			);
@@ -80,8 +102,9 @@
 		BAE5E021269C750300DE0C2C /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BAE5E017269C74EB00DE0C2C /* FirstViewController.swift */,
-				BAE5E018269C74EB00DE0C2C /* FirstViewController.xib */,
+				BAE5E029269C766100DE0C2C /* FirstViewController.swift */,
+				BAE5E02F269C770700DE0C2C /* FirstTableViewCell.swift */,
+				BAE5E030269C770700DE0C2C /* FirstTableViewCell.xib */,
 			);
 			path = FirstViewController;
 			sourceTree = "<group>";
@@ -89,8 +112,9 @@
 		BAE5E023269C751400DE0C2C /* SecondViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BAE5E01C269C74FB00DE0C2C /* SecondViewController.swift */,
-				BAE5E01D269C74FB00DE0C2C /* SecondViewController.xib */,
+				BAE5E02C269C766A00DE0C2C /* SecondViewController.swift */,
+				BAE5E034269C771C00DE0C2C /* SecondTableViewCell.swift */,
+				BAE5E035269C771C00DE0C2C /* SecondTableViewCell.xib */,
 			);
 			path = SecondViewController;
 			sourceTree = "<group>";
@@ -99,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE5E014269C6EBE00DE0C2C /* Device.swift */,
+				BAE5E039269C7A9C00DE0C2C /* DevicesArrays.swift */,
+				BA3177ED269CDA83003C0875 /* UserMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,11 +186,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3177F9269CDD3E003C0875 /* DeviceInfoViewController.xib in Resources */,
 				BAE5E00C269C6E5100DE0C2C /* LaunchScreen.storyboard in Resources */,
 				BAE5E009269C6E5100DE0C2C /* Assets.xcassets in Resources */,
+				BAE5E037269C771C00DE0C2C /* SecondTableViewCell.xib in Resources */,
+				BAE5E032269C770700DE0C2C /* FirstTableViewCell.xib in Resources */,
 				BAE5E007269C6E4F00DE0C2C /* Main.storyboard in Resources */,
-				BAE5E01A269C74EB00DE0C2C /* FirstViewController.xib in Resources */,
-				BAE5E01F269C74FB00DE0C2C /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,11 +202,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE5E01E269C74FB00DE0C2C /* SecondViewController.swift in Sources */,
-				BAE5E019269C74EB00DE0C2C /* FirstViewController.swift in Sources */,
+				BAE5E031269C770700DE0C2C /* FirstTableViewCell.swift in Sources */,
 				BAE5E000269C6E4F00DE0C2C /* AppDelegate.swift in Sources */,
 				BAE5E002269C6E4F00DE0C2C /* SceneDelegate.swift in Sources */,
 				BAE5E015269C6EBE00DE0C2C /* Device.swift in Sources */,
+				BAE5E02D269C766A00DE0C2C /* SecondViewController.swift in Sources */,
+				BA3177EE269CDA83003C0875 /* UserMessage.swift in Sources */,
+				BAE5E036269C771C00DE0C2C /* SecondTableViewCell.swift in Sources */,
+				BAE5E03A269C7A9C00DE0C2C /* DevicesArrays.swift in Sources */,
+				BA3177F8269CDD3E003C0875 /* DeviceInfoViewController.swift in Sources */,
+				BAE5E02A269C766100DE0C2C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
