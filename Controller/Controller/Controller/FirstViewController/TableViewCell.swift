@@ -7,12 +7,10 @@
 
 import UIKit
 
-class FirstTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak private var nameTitle: UILabel!
-    
-    @IBOutlet weak private var infoTitle: UILabel!
-    
+    @IBOutlet weak private var nameLabel: UILabel!
+    @IBOutlet weak  var infoLabel: UILabel!
     @IBOutlet weak private var deviceImageView: UIImageView!
     
     var deviceModel: DeviceModel? {
@@ -20,10 +18,15 @@ class FirstTableViewCell: UITableViewCell {
         didSet {
             guard let device = deviceModel else { return }
 
-            nameTitle.text = device.devise.rawValue
-            infoTitle.text = "PPI: \(device.ppi), Diagonal: \(device.diagonal) inch"
+            nameLabel.text = device.devise.rawValue
+            infoLabel.text = "PPI: \(device.ppi), Diagonal: \(device.diagonal) inch"
             deviceImageView.image = UIImage(named: device.imageName)
         }
+    }
+    
+    func update(string: String, image: UIImage) {
+        infoLabel.text = string
+        deviceImageView.image = image
     }
     
     override func awakeFromNib() {

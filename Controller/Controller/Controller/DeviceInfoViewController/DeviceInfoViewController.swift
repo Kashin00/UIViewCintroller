@@ -2,32 +2,39 @@
 //  DeviceInfoViewController.swift
 //  Controller
 //
-//  Created by Матвей Кашин on 12.07.2021.
+//  Created by Матвей Кашин on 13.07.2021.
 //
 
 import UIKit
 
-class DeviceInfoViewController: UIViewController {
-    @IBOutlet weak private var deviceImageView: UIImageView!
-    @IBOutlet weak private var modelTextField: UITextField!
-    @IBOutlet weak private var infoTextField: UITextField!
+class DeviceInfoViewController: UIViewController, UINavigationControllerDelegate {
     
+    @IBOutlet weak private var deviceView: DeviceInfo!
+
     private let userMessage = UserMessage.ActionSheet()
+    private let imagePicker = UIImagePickerController()
+    private var image:UIImage?
+    private let unknownImage = UIImage(named: "Unknown")!
+
     
-    var deviceInfoClosure: ((DeviceModel) -> ())?
+    var infoTextField = UITextField()
     
+    var injectData: ((String, UIImage) -> ())?
+
     var deviceModel: DeviceModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let device = deviceModel else { return }
-        modelTextField.text = device.devise.rawValue
-        infoTextField.text = "PPI: \(device.ppi), Diagonal: \(device.diagonal) inch"
-        deviceImageView.image = UIImage(named: device.imageName)
-        modelTextField.delegate = self
-        infoTextField.delegate = self
+        let getInfoTextField = deviceView.returnIndoTextField()
+        infoTextField = getInfoTextField
+        image = deviceView.returnImage()
+
         createRightBarButtonItem()
+        infoTextField.delegate = self
+        imagePicker.delegate = self
+        guard let deviceModel = deviceModel else { return }
+        deviceView.setUpViewWithData(deviceModel: deviceModel)
     }
     
     private func createRightBarButtonItem() {
@@ -38,21 +45,37 @@ class DeviceInfoViewController: UIViewController {
     @objc func didPresedRightButtonItem() {
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: userMessage.changePhoto, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: userMessage.changePhoto, style: .default, handler: {_ in
+            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.allowsEditing = true
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }))
         alert.addAction(UIAlertAction(title: userMessage.cancel, style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+}
+
+extension DeviceInfoViewController: UIImagePickerControllerDelegate {
     
-   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let selectedImage = info[.originalImage] as? UIImage
+        else { return }
+
+        deviceView.setUpNewPhoto(selectedImage)
+        image = deviceView.returnImage()
+        injectData?(infoTextField.text ?? "", image ?? unknownImage)
+
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension DeviceInfoViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        modelTextField.resignFirstResponder()
         infoTextField.resignFirstResponder()
-
-        
+        image = deviceView.returnImage()
+        injectData?(infoTextField.text ?? "", image ?? unknownImage)
         return true
     }
 }

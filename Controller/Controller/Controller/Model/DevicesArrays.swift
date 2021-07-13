@@ -1,6 +1,6 @@
 import Foundation
 
-let allDevices: [DeviceModel] = [
+var allDevices: [DeviceModel] = [
     DeviceModel(devise: .iPhone4s, destription: destriptionDictionary[.iPhone4s]!, diagonal: diagonalDicrionary[.iPhone4s]!, ppi: disctionatyPPI[.iPhone4s]!, imageName: "iphone4s"),
     DeviceModel(devise: .iPhone5, destription: destriptionDictionary[.iPhone5]!, diagonal: diagonalDicrionary[.iPhone5]!, ppi: disctionatyPPI[.iPhone5]!, imageName: "iphone5"),
     DeviceModel(devise: .iPhone5s, destription: destriptionDictionary[.iPhone5s]!, diagonal: diagonalDicrionary[.iPhone5s]!, ppi: disctionatyPPI[.iPhone5s]!, imageName: "iphone5s"),
@@ -19,24 +19,22 @@ let allDevices: [DeviceModel] = [
     DeviceModel(devise: .iPhoneXR, destription: destriptionDictionary[.iPhoneXR]!, diagonal: diagonalDicrionary[.iPhoneXR]!, ppi: disctionatyPPI[.iPhoneXR]!, imageName: "iphoneXr"),
     DeviceModel(devise: .iPad5gen, destription: destriptionDictionary[.iPad5gen]!, diagonal: diagonalDicrionary[.iPad5gen]!, ppi: disctionatyPPI[.iPad5gen]!, imageName: "ipad5gen"),
     DeviceModel(devise: .iPad6gen, destription: destriptionDictionary[.iPad6gen]!, diagonal: diagonalDicrionary[.iPad6gen]!, ppi: disctionatyPPI[.iPad6gen]!, imageName: "ipad6gen"),
-    DeviceModel(devise: .ipadAir3gen, destription: destriptionDictionary[.ipadAir3gen]!, diagonal: diagonalDicrionary[.ipadAir3gen]!, ppi: disctionatyPPI[.ipadAir3gen]!, imageName: "ipadAir3gen"),
-    DeviceModel(devise: .ipadMini, destription: destriptionDictionary[.ipadMini]!, diagonal: diagonalDicrionary[.ipadMini]!, ppi: disctionatyPPI[.ipadMini]!, imageName: "ipadMini"),
-    DeviceModel(devise: .ipadMini2, destription: destriptionDictionary[.ipadMini2]!, diagonal: diagonalDicrionary[.ipadMini2]!, ppi: disctionatyPPI[.ipadMini2]!, imageName: "ipadMini2"),
-    DeviceModel(devise: .ipadMini3, destription: destriptionDictionary[.ipadMini3]!, diagonal: diagonalDicrionary[.ipadMini3]!, ppi: disctionatyPPI[.ipadMini3]!, imageName: "ipadMini3"),
-    DeviceModel(devise: .ipadMini4, destription: destriptionDictionary[.ipadMini4]!, diagonal: diagonalDicrionary[.ipadMini4]!, ppi: disctionatyPPI[.ipadMini4]!, imageName: "ipadMini4"),
-    DeviceModel(devise: .ipadMini5, destription: destriptionDictionary[.ipadMini5]!, diagonal: diagonalDicrionary[.ipadMini5]!, ppi: disctionatyPPI[.ipadMini5]!, imageName: "ipadMini5"),
-    DeviceModel(devise: .ipadPro, destription: destriptionDictionary[.ipadPro]!, diagonal: diagonalDicrionary[.ipadPro]!, ppi: disctionatyPPI[.ipadPro]!, imageName: "ipadPro"),
-    DeviceModel(devise: .ipadPro10, destription: destriptionDictionary[.ipadPro10]!, diagonal: diagonalDicrionary[.ipadPro10]!, ppi: disctionatyPPI[.ipadPro10]!, imageName: "ipadPro10"),
-    DeviceModel(devise: .ipadPro11, destription: destriptionDictionary[.ipadPro11]!, diagonal: diagonalDicrionary[.ipadPro11]!, ppi: disctionatyPPI[.ipadPro11]!, imageName: "ipadPro11"),
+    DeviceModel(devise: .iPadAir3gen, destription: destriptionDictionary[.iPadAir3gen]!, diagonal: diagonalDicrionary[.iPadAir3gen]!, ppi: disctionatyPPI[.iPadAir3gen]!, imageName: "ipadAir3gen"),
+    DeviceModel(devise: .iPadMini, destription: destriptionDictionary[.iPadMini]!, diagonal: diagonalDicrionary[.iPadMini]!, ppi: disctionatyPPI[.iPadMini]!, imageName: "ipadMini"),
+    DeviceModel(devise: .iPadMini2, destription: destriptionDictionary[.iPadMini2]!, diagonal: diagonalDicrionary[.iPadMini2]!, ppi: disctionatyPPI[.iPadMini2]!, imageName: "ipadMini2"),
+    DeviceModel(devise: .iPadMini3, destription: destriptionDictionary[.iPadMini3]!, diagonal: diagonalDicrionary[.iPadMini3]!, ppi: disctionatyPPI[.iPadMini3]!, imageName: "ipadMini3"),
+    DeviceModel(devise: .iPadMini4, destription: destriptionDictionary[.iPadMini4]!, diagonal: diagonalDicrionary[.iPadMini4]!, ppi: disctionatyPPI[.iPadMini4]!, imageName: "ipadMini4"),
+    DeviceModel(devise: .iPadMini5, destription: destriptionDictionary[.iPadMini5]!, diagonal: diagonalDicrionary[.iPadMini5]!, ppi: disctionatyPPI[.iPadMini5]!, imageName: "ipadMini5"),
+    DeviceModel(devise: .iPadPro, destription: destriptionDictionary[.iPadPro]!, diagonal: diagonalDicrionary[.iPadPro]!, ppi: disctionatyPPI[.iPadPro]!, imageName: "ipadPro"),
+    DeviceModel(devise: .iPadPro10, destription: destriptionDictionary[.iPadPro10]!, diagonal: diagonalDicrionary[.iPadPro10]!, ppi: disctionatyPPI[.iPadPro10]!, imageName: "ipadPro10"),
+    DeviceModel(devise: .iPadPro11, destription: destriptionDictionary[.iPadPro11]!, diagonal: diagonalDicrionary[.iPadPro11]!, ppi: disctionatyPPI[.iPadPro11]!, imageName: "ipadPro11"),
     
-    DeviceModel(devise: .ipad12_1gen, destription: destriptionDictionary[.ipad12_1gen]!, diagonal: diagonalDicrionary[.ipad12_1gen]!, ppi: disctionatyPPI[.ipad12_1gen]!, imageName: "ipadPro12.1gen"),
-    
-    DeviceModel(devise: .ipad12_2gen, destription: destriptionDictionary[.ipad12_2gen]!, diagonal: diagonalDicrionary[.ipad12_2gen]!, ppi: disctionatyPPI[.ipad12_2gen]!, imageName: "ipadPro12.2gen"),
-    
-    DeviceModel(devise: .ipad12_3gen, destription: destriptionDictionary[.ipad12_3gen]!, diagonal: diagonalDicrionary[.ipad12_3gen]!, ppi: disctionatyPPI[.ipad12_3gen]!, imageName: "ipadPro12.3gen")
+    DeviceModel(devise: .iPad12_1gen, destription: destriptionDictionary[.iPad12_1gen]!, diagonal: diagonalDicrionary[.iPad12_1gen]!, ppi: disctionatyPPI[.iPad12_1gen]!, imageName: "ipadPro12.1gen"),
+    DeviceModel(devise: .iPad12_2gen, destription: destriptionDictionary[.iPad12_2gen]!, diagonal: diagonalDicrionary[.iPad12_2gen]!, ppi: disctionatyPPI[.iPad12_2gen]!, imageName: "ipadPro12.2gen"),
+    DeviceModel(devise: .iPad12_3gen, destription: destriptionDictionary[.iPad12_3gen]!, diagonal: diagonalDicrionary[.iPad12_3gen]!, ppi: disctionatyPPI[.iPad12_3gen]!, imageName: "ipadPro12.3gen")
 ]
 
-let iphones: [DeviceModel] = [
+var iPhoneArray: [DeviceModel] = [
     DeviceModel(devise: .iPhone4s, destription: destriptionDictionary[.iPhone4s]!, diagonal: diagonalDicrionary[.iPhone4s]!, ppi: disctionatyPPI[.iPhone4s]!, imageName: "iphone4s"),
     DeviceModel(devise: .iPhone5, destription: destriptionDictionary[.iPhone5]!, diagonal: diagonalDicrionary[.iPhone5]!, ppi: disctionatyPPI[.iPhone5]!, imageName: "iphone5"),
     DeviceModel(devise: .iPhone5s, destription: destriptionDictionary[.iPhone5s]!, diagonal: diagonalDicrionary[.iPhone5s]!, ppi: disctionatyPPI[.iPhone5s]!, imageName: "iphone5s"),
@@ -55,22 +53,21 @@ let iphones: [DeviceModel] = [
     DeviceModel(devise: .iPhoneXR, destription: destriptionDictionary[.iPhoneXR]!, diagonal: diagonalDicrionary[.iPhoneXR]!, ppi: disctionatyPPI[.iPhoneXR]!, imageName: "iphoneXr")
 ]
 
-let ipads: [DeviceModel] = [
+var iPadArray: [DeviceModel] = [
+    
     DeviceModel(devise: .iPad5gen, destription: destriptionDictionary[.iPad5gen]!, diagonal: diagonalDicrionary[.iPad5gen]!, ppi: disctionatyPPI[.iPad5gen]!, imageName: "ipad5gen"),
     DeviceModel(devise: .iPad6gen, destription: destriptionDictionary[.iPad6gen]!, diagonal: diagonalDicrionary[.iPad6gen]!, ppi: disctionatyPPI[.iPad6gen]!, imageName: "ipad6gen"),
-    DeviceModel(devise: .ipadAir3gen, destription: destriptionDictionary[.ipadAir3gen]!, diagonal: diagonalDicrionary[.ipadAir3gen]!, ppi: disctionatyPPI[.ipadAir3gen]!, imageName: "ipadAir3gen"),
-    DeviceModel(devise: .ipadMini, destription: destriptionDictionary[.ipadMini]!, diagonal: diagonalDicrionary[.ipadMini]!, ppi: disctionatyPPI[.ipadMini]!, imageName: "ipadMini"),
-    DeviceModel(devise: .ipadMini2, destription: destriptionDictionary[.ipadMini2]!, diagonal: diagonalDicrionary[.ipadMini2]!, ppi: disctionatyPPI[.ipadMini2]!, imageName: "ipadMini2"),
-    DeviceModel(devise: .ipadMini3, destription: destriptionDictionary[.ipadMini3]!, diagonal: diagonalDicrionary[.ipadMini3]!, ppi: disctionatyPPI[.ipadMini3]!, imageName: "ipadMini3"),
-    DeviceModel(devise: .ipadMini4, destription: destriptionDictionary[.ipadMini4]!, diagonal: diagonalDicrionary[.ipadMini4]!, ppi: disctionatyPPI[.ipadMini4]!, imageName: "ipadMini4"),
-    DeviceModel(devise: .ipadMini5, destription: destriptionDictionary[.ipadMini5]!, diagonal: diagonalDicrionary[.ipadMini5]!, ppi: disctionatyPPI[.ipadMini5]!, imageName: "ipadMini5"),
-    DeviceModel(devise: .ipadPro, destription: destriptionDictionary[.ipadPro]!, diagonal: diagonalDicrionary[.ipadPro]!, ppi: disctionatyPPI[.ipadPro]!, imageName: "ipadPro"),
-    DeviceModel(devise: .ipadPro10, destription: destriptionDictionary[.ipadPro10]!, diagonal: diagonalDicrionary[.ipadPro10]!, ppi: disctionatyPPI[.ipadPro10]!, imageName: "ipadPro10"),
-    DeviceModel(devise: .ipadPro11, destription: destriptionDictionary[.ipadPro11]!, diagonal: diagonalDicrionary[.ipadPro11]!, ppi: disctionatyPPI[.ipadPro11]!, imageName: "ipadPro11"),
+    DeviceModel(devise: .iPadAir3gen, destription: destriptionDictionary[.iPadAir3gen]!, diagonal: diagonalDicrionary[.iPadAir3gen]!, ppi: disctionatyPPI[.iPadAir3gen]!, imageName: "ipadAir3gen"),
+    DeviceModel(devise: .iPadMini, destription: destriptionDictionary[.iPadMini]!, diagonal: diagonalDicrionary[.iPadMini]!, ppi: disctionatyPPI[.iPadMini]!, imageName: "ipadMini"),
+    DeviceModel(devise: .iPadMini2, destription: destriptionDictionary[.iPadMini2]!, diagonal: diagonalDicrionary[.iPadMini2]!, ppi: disctionatyPPI[.iPadMini2]!, imageName: "ipadMini2"),
+    DeviceModel(devise: .iPadMini3, destription: destriptionDictionary[.iPadMini3]!, diagonal: diagonalDicrionary[.iPadMini3]!, ppi: disctionatyPPI[.iPadMini3]!, imageName: "ipadMini3"),
+    DeviceModel(devise: .iPadMini4, destription: destriptionDictionary[.iPadMini4]!, diagonal: diagonalDicrionary[.iPadMini4]!, ppi: disctionatyPPI[.iPadMini4]!, imageName: "ipadMini4"),
+    DeviceModel(devise: .iPadMini5, destription: destriptionDictionary[.iPadMini5]!, diagonal: diagonalDicrionary[.iPadMini5]!, ppi: disctionatyPPI[.iPadMini5]!, imageName: "ipadMini5"),
+    DeviceModel(devise: .iPadPro, destription: destriptionDictionary[.iPadPro]!, diagonal: diagonalDicrionary[.iPadPro]!, ppi: disctionatyPPI[.iPadPro]!, imageName: "ipadPro"),
+    DeviceModel(devise: .iPadPro10, destription: destriptionDictionary[.iPadPro10]!, diagonal: diagonalDicrionary[.iPadPro10]!, ppi: disctionatyPPI[.iPadPro10]!, imageName: "ipadPro10"),
+    DeviceModel(devise: .iPadPro11, destription: destriptionDictionary[.iPadPro11]!, diagonal: diagonalDicrionary[.iPadPro11]!, ppi: disctionatyPPI[.iPadPro11]!, imageName: "ipadPro11"),
     
-    DeviceModel(devise: .ipad12_1gen, destription: destriptionDictionary[.ipad12_1gen]!, diagonal: diagonalDicrionary[.ipad12_1gen]!, ppi: disctionatyPPI[.ipad12_1gen]!, imageName: "ipadPro12.1gen"),
-    
-    DeviceModel(devise: .ipad12_2gen, destription: destriptionDictionary[.ipad12_2gen]!, diagonal: diagonalDicrionary[.ipad12_2gen]!, ppi: disctionatyPPI[.ipad12_2gen]!, imageName: "ipadPro12.2gen"),
-    
-    DeviceModel(devise: .ipad12_3gen, destription: destriptionDictionary[.ipad12_3gen]!, diagonal: diagonalDicrionary[.ipad12_3gen]!, ppi: disctionatyPPI[.ipad12_3gen]!, imageName: "ipadPro12.3gen")
+    DeviceModel(devise: .iPad12_1gen, destription: destriptionDictionary[.iPad12_1gen]!, diagonal: diagonalDicrionary[.iPad12_1gen]!, ppi: disctionatyPPI[.iPad12_1gen]!, imageName: "ipadPro12.1gen"),
+    DeviceModel(devise: .iPad12_2gen, destription: destriptionDictionary[.iPad12_2gen]!, diagonal: diagonalDicrionary[.iPad12_2gen]!, ppi: disctionatyPPI[.iPad12_2gen]!, imageName: "ipadPro12.2gen"),
+    DeviceModel(devise: .iPad12_3gen, destription: destriptionDictionary[.iPad12_3gen]!, diagonal: diagonalDicrionary[.iPad12_3gen]!, ppi: disctionatyPPI[.iPad12_3gen]!, imageName: "ipadPro12.3gen")
 ]
