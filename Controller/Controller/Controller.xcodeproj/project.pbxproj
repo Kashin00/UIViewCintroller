@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		BA3177EE269CDA83003C0875 /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3177ED269CDA83003C0875 /* UserMessage.swift */; };
 		BA3177FD269D7052003C0875 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3177FC269D7052003C0875 /* SecondViewController.swift */; };
-		BA31781B269D8EF8003C0875 /* DeviceInfoXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA31781A269D8EF8003C0875 /* DeviceInfoXib.xib */; };
-		BA31781E269D8F4D003C0875 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31781D269D8F4D003C0875 /* DeviceInfo.swift */; };
+		BA31781B269D8EF8003C0875 /* DeviceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA31781A269D8EF8003C0875 /* DeviceInfoView.xib */; };
+		BA31781E269D8F4D003C0875 /* DeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31781D269D8F4D003C0875 /* DeviceInfoView.swift */; };
 		BA317821269D9013003C0875 /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA317820269D9013003C0875 /* DeviceInfoViewController.swift */; };
 		BAD78739269DE98B00722865 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAD78738269DE98B00722865 /* HeaderView.xib */; };
 		BAD7873C269DE9AB00722865 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD7873B269DE9AB00722865 /* HeaderView.swift */; };
@@ -29,8 +29,8 @@
 /* Begin PBXFileReference section */
 		BA3177ED269CDA83003C0875 /* UserMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessage.swift; sourceTree = "<group>"; };
 		BA3177FC269D7052003C0875 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		BA31781A269D8EF8003C0875 /* DeviceInfoXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceInfoXib.xib; sourceTree = "<group>"; };
-		BA31781D269D8F4D003C0875 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		BA31781A269D8EF8003C0875 /* DeviceInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceInfoView.xib; sourceTree = "<group>"; };
+		BA31781D269D8F4D003C0875 /* DeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoView.swift; sourceTree = "<group>"; };
 		BA317820269D9013003C0875 /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
 		BAD78738269DE98B00722865 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		BAD7873B269DE9AB00722865 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -59,14 +59,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BA3177E0269C9B7D003C0875 /* DeviceInfoViewController */ = {
+		BA3177E0269C9B7D003C0875 /* DeviceInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				BA317820269D9013003C0875 /* DeviceInfoViewController.swift */,
-				BA31781D269D8F4D003C0875 /* DeviceInfo.swift */,
-				BA31781A269D8EF8003C0875 /* DeviceInfoXib.xib */,
+				BA31781D269D8F4D003C0875 /* DeviceInfoView.swift */,
+				BA31781A269D8EF8003C0875 /* DeviceInfoView.xib */,
 			);
-			path = DeviceInfoViewController;
+			path = DeviceInfoView;
 			sourceTree = "<group>";
 		};
 		BAE5DFF3269C6E4F00DE0C2C = {
@@ -91,9 +90,10 @@
 				BAE5DFFF269C6E4F00DE0C2C /* AppDelegate.swift */,
 				BAE5E001269C6E4F00DE0C2C /* SceneDelegate.swift */,
 				BAE5E005269C6E4F00DE0C2C /* Main.storyboard */,
-				BAE5E021269C750300DE0C2C /* FirstViewController */,
-				BAE5E023269C751400DE0C2C /* SecondViewController */,
-				BA3177E0269C9B7D003C0875 /* DeviceInfoViewController */,
+				BAE84C4E269F00A100EC87B0 /* ViewControllers */,
+				BAE5E021269C750300DE0C2C /* TableViewCell */,
+				BAE5E023269C751400DE0C2C /* HeaderView */,
+				BA3177E0269C9B7D003C0875 /* DeviceInfoView */,
 				BAE5E026269C754000DE0C2C /* Model */,
 				BAE5E008269C6E5100DE0C2C /* Assets.xcassets */,
 				BAE5E00A269C6E5100DE0C2C /* LaunchScreen.storyboard */,
@@ -102,24 +102,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BAE5E021269C750300DE0C2C /* FirstViewController */ = {
+		BAE5E021269C750300DE0C2C /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				BAE5E029269C766100DE0C2C /* FirstViewController.swift */,
 				BAE5E02F269C770700DE0C2C /* TableViewCell.swift */,
 				BAE5E030269C770700DE0C2C /* TableViewCell.xib */,
 			);
-			path = FirstViewController;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		BAE5E023269C751400DE0C2C /* SecondViewController */ = {
+		BAE5E023269C751400DE0C2C /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
-				BA3177FC269D7052003C0875 /* SecondViewController.swift */,
 				BAD7873B269DE9AB00722865 /* HeaderView.swift */,
 				BAD78738269DE98B00722865 /* HeaderView.xib */,
 			);
-			path = SecondViewController;
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 		BAE5E026269C754000DE0C2C /* Model */ = {
@@ -130,6 +128,16 @@
 				BA3177ED269CDA83003C0875 /* UserMessage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BAE84C4E269F00A100EC87B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAE5E029269C766100DE0C2C /* FirstViewController.swift */,
+				BA3177FC269D7052003C0875 /* SecondViewController.swift */,
+				BA317820269D9013003C0875 /* DeviceInfoViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +202,7 @@
 				BAE5E032269C770700DE0C2C /* TableViewCell.xib in Resources */,
 				BAD78739269DE98B00722865 /* HeaderView.xib in Resources */,
 				BAE5E007269C6E4F00DE0C2C /* Main.storyboard in Resources */,
-				BA31781B269D8EF8003C0875 /* DeviceInfoXib.xib in Resources */,
+				BA31781B269D8EF8003C0875 /* DeviceInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +216,7 @@
 				BAE5E031269C770700DE0C2C /* TableViewCell.swift in Sources */,
 				BAE5E000269C6E4F00DE0C2C /* AppDelegate.swift in Sources */,
 				BAE5E002269C6E4F00DE0C2C /* SceneDelegate.swift in Sources */,
-				BA31781E269D8F4D003C0875 /* DeviceInfo.swift in Sources */,
+				BA31781E269D8F4D003C0875 /* DeviceInfoView.swift in Sources */,
 				BA3177FD269D7052003C0875 /* SecondViewController.swift in Sources */,
 				BAE5E015269C6EBE00DE0C2C /* Device.swift in Sources */,
 				BA317821269D9013003C0875 /* DeviceInfoViewController.swift in Sources */,
@@ -292,7 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -347,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

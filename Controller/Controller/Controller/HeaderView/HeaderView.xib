@@ -20,10 +20,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7k-P4-VTA">
-                    <rect key="frame" x="24" y="0.0" width="182" height="54"/>
+                    <rect key="frame" x="15" y="17" width="165" height="20.5"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="54" id="VQW-tY-Pia"/>
-                        <constraint firstAttribute="width" constant="182" id="fPo-oA-IXM"/>
+                        <constraint firstAttribute="height" constant="20.5" id="Ra1-mC-UF7"/>
+                        <constraint firstAttribute="width" constant="165" id="w5R-E0-6nL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -33,10 +33,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e7k-P4-VTA" secondAttribute="trailing" constant="216" id="Ir3-QF-bhX"/>
-                <constraint firstAttribute="bottom" secondItem="e7k-P4-VTA" secondAttribute="bottom" constant="1" id="Rg7-Kf-WI9"/>
-                <constraint firstItem="e7k-P4-VTA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lOA-Bs-MwA"/>
-                <constraint firstItem="e7k-P4-VTA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="qQt-dM-wCm"/>
+                <constraint firstItem="e7k-P4-VTA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-113.5" id="7sP-W6-Bod"/>
+                <constraint firstItem="e7k-P4-VTA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="INk-f3-Ezu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="237.68115942028987" y="294.30803571428572"/>

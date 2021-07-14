@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class DeviceInfo: UIView {
+class DeviceInfoView: UIView {
 
     @IBOutlet weak private var deviceImageView: UIImageView!
     @IBOutlet weak private var infoTextField: UITextField!
@@ -24,33 +24,18 @@ class DeviceInfo: UIView {
         setUpView()
     }
     
-    private func setUpView() {
-
-        let xibView = loadViewFromXib()
-        xibView.frame = self.bounds
-        xibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(xibView)
-    }
-    
-    private func loadViewFromXib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "DeviceInfoXib", bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-    }
-    
     public func setUpViewWithData(deviceModel: DeviceModel) {
         
-        deviceImageView.image = UIImage(named: deviceModel.imageName)
         modelLabel.text = deviceModel.devise.rawValue
-        infoTextField.text = "PPi: \(deviceModel.ppi), Diagonal: \(deviceModel.diagonal) inch"
+        deviceImageView.image = deviceModel.image
+        infoTextField.text = deviceModel.info
     }
     
     public func setUpNewPhoto(_ image: UIImage) {
         deviceImageView.image = image
     }
     
-    
-    public func returnIndoTextField() -> UITextField {
+    public func returnTextField() -> UITextField  {
         
         let info = infoTextField ?? UITextField()
         return info
@@ -60,11 +45,21 @@ class DeviceInfo: UIView {
         
         return deviceImageView.image ?? UIImage(named: "Unknown")!
     }
-    
-    
-    
 }
 
-extension DeviceInfo: UITextFieldDelegate {
+private extension DeviceInfoView {
     
+    func setUpView() {
+
+        let xibView = loadViewFromXib()
+        xibView.frame = self.bounds
+        xibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(xibView)
+    }
+    
+     func loadViewFromXib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: String(describing: DeviceInfoView.self), bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+    }
 }

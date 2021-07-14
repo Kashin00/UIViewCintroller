@@ -6,14 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct DeviceModel {
-
     var devise: Devices
-    var destription: String
-    var diagonal: Double
-    var ppi: Int
-    var imageName: String
+    var info: String
+    var image: UIImage
 }
 
 enum Devices: String {
