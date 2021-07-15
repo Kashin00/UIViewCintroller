@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class DeviceCell: UITableViewCell {
 
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var infoLabel: UILabel!

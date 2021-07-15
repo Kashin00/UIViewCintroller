@@ -10,13 +10,14 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak private var deviceTableView: UITableView!
-    private let idCell = String(describing: TableViewCell.self)
+    private let idCell = String(describing: DeviceCell.self)
     private let heightForRow: CGFloat = 60
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
 
-        deviceTableView.register(UINib(nibName: String(describing: TableViewCell.self), bundle: nil), forCellReuseIdentifier: idCell)
+        deviceTableView.register(UINib(nibName: String(describing: DeviceCell.self), bundle: nil), forCellReuseIdentifier: idCell)
     }
 }
 
@@ -27,7 +28,8 @@ extension FirstViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let infoVC = storyboard?.instantiateViewController(identifier: String(describing: DeviceInfoViewController.self)) as? DeviceInfoViewController else { return }
+        
+        guard let infoVC = ControllersAssembly.viewController(for: .device) as? DeviceInfoViewController else { return }
         
         deviceTableView.deselectRow(at: indexPath, animated: true)
         let currentElement = allDevices[indexPath.row]
@@ -51,7 +53,7 @@ extension FirstViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: idCell) as? TableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: idCell) as? DeviceCell
         else { return UITableViewCell() }
         
         let currentElement = allDevices[indexPath.row]

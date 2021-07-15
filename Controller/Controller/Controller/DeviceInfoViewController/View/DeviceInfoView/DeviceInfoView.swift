@@ -13,6 +13,12 @@ class DeviceInfoView: UIView {
     @IBOutlet weak private var deviceImageView: UIImageView!
     @IBOutlet weak private var infoTextField: UITextField!
     @IBOutlet weak private var modelLabel: UILabel!
+
+    lazy var text:String = infoTextField.text ?? ""
+    lazy var image: UIImage? = deviceImageView.image
+    
+
+    var dataFromDeviceView: ((String, UIImage) -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,12 +41,6 @@ class DeviceInfoView: UIView {
         deviceImageView.image = image
     }
     
-    public func returnTextField() -> UITextField  {
-        
-        let info = infoTextField ?? UITextField()
-        return info
-    }
-    
     public func returnImage() -> UIImage {
         
         return deviceImageView.image ?? UIImage(named: "Unknown")!
@@ -54,6 +54,7 @@ private extension DeviceInfoView {
         let xibView = loadViewFromXib()
         xibView.frame = self.bounds
         xibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        infoTextField.delegate = self
         self.addSubview(xibView)
     }
     
@@ -61,5 +62,13 @@ private extension DeviceInfoView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: DeviceInfoView.self), bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+    }
+}
+extension DeviceInfoView: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        infoTextField.resignFirstResponder()
+        text = infoTextField.text ?? ""
+        return true
     }
 }

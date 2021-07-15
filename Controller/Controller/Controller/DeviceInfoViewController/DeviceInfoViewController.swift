@@ -16,14 +16,22 @@ class DeviceInfoViewController: UIViewController, UINavigationControllerDelegate
     private var image:UIImage?
     private let unknownImage = UIImage(named: "Unknown")!
     
-    var infoTextField = UITextField()
     var dataFromDeviceVC: ((String, UIImage) -> ())?
     var deviceModel: DeviceModel?
+    
+    var textFromTextField: String?
+    var testImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpUI()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        dataFromDeviceVC?(deviceView.text , deviceView.image ?? UIImage(named: "Unknown")!)
     }
 }
 
@@ -36,21 +44,10 @@ extension DeviceInfoViewController: UIImagePickerControllerDelegate {
       
         deviceView.setUpNewPhoto(selectedImage)
         image = selectedImage
-        dataFromDeviceVC?(infoTextField.text ?? "", image ?? unknownImage)
+        deviceView.image = selectedImage
+        dataFromDeviceVC?(textFromTextField ?? "", image ?? unknownImage)
 
         dismiss(animated: true, completion: nil)
-    }
-}
-
-extension DeviceInfoViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        infoTextField.resignFirstResponder()
-        image = deviceView.returnImage()
-        dataFromDeviceVC?(infoTextField.text ?? "", image ?? unknownImage)
-        
-        return true
     }
 }
 
@@ -58,11 +55,9 @@ private extension DeviceInfoViewController {
     
     func setUpUI() {
         
-        infoTextField = deviceView.returnTextField()
         image = deviceView.returnImage()
 
         createRightBarButtonItem()
-        infoTextField.delegate = self
         imagePicker.delegate = self
         
         guard let deviceModel = deviceModel else { return }
