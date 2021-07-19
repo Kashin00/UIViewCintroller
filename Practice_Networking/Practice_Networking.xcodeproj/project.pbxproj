@@ -18,6 +18,7 @@
 		BA7A9E5826A0A63B004A9ADF /* AllDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A9E5726A0A63B004A9ADF /* AllDataTableViewCell.swift */; };
 		BA7A9E6126A0AB66004A9ADF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A9E6026A0AB66004A9ADF /* Model.swift */; };
 		BA7A9E7A26A18DB0004A9ADF /* UploadPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7A9E7926A18DB0004A9ADF /* UploadPhotoViewController.swift */; };
+		BA9AA83326A5B533007E2DFF /* UsersMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA83226A5B533007E2DFF /* UsersMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BA7A9E5726A0A63B004A9ADF /* AllDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDataTableViewCell.swift; sourceTree = "<group>"; };
 		BA7A9E6026A0AB66004A9ADF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BA7A9E7926A18DB0004A9ADF /* UploadPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoViewController.swift; sourceTree = "<group>"; };
+		BA9AA83226A5B533007E2DFF /* UsersMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BA7A9E6026A0AB66004A9ADF /* Model.swift */,
+				BA9AA83226A5B533007E2DFF /* UsersMessage.swift */,
 				BA7A9E4826A08786004A9ADF /* NetworkManager.swift */,
 			);
 			path = Model;
@@ -209,6 +212,7 @@
 				9510DE6F2305898F0099F8D1 /* AppDelegate.swift in Sources */,
 				BA7A9E5326A0A2BD004A9ADF /* AllDataViewController.swift in Sources */,
 				BA7A9E5826A0A63B004A9ADF /* AllDataTableViewCell.swift in Sources */,
+				BA9AA83326A5B533007E2DFF /* UsersMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

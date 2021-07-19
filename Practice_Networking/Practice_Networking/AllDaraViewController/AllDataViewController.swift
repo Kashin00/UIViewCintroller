@@ -13,7 +13,7 @@ class AllDataViewController: UIViewController {
     @IBOutlet weak var dataTableView: UITableView!
     
     private let heightForRow = CGFloat(140)
-    public var userArray = [Users]()
+    public var modelArray = [DecodeModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +38,13 @@ extension AllDataViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userArray.count
+        return modelArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllDataTableViewCell", for: indexPath) as? AllDataTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:  String(describing: AllDataTableViewCell.self), for: indexPath) as? AllDataTableViewCell else { return UITableViewCell() }
         
-        let currentElement = userArray[indexPath.row]
+        let currentElement = modelArray[indexPath.row]
         cell.setUpCell(user: currentElement)
         return cell
     }

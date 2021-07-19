@@ -10,17 +10,17 @@ import UIKit
 
 class AllDataTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var userIdLabel: UILabel!
-    @IBOutlet weak var bodyLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak private var idLabel: UILabel!
+    @IBOutlet weak private var userIdLabel: UILabel!
+    @IBOutlet weak private var bodyLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
         
-    public func setUpCell(user: Users) {
+    public func setUpCell(user: DecodeModel) {
         idLabel.text = "Id: " + String(user.id)
         userIdLabel.text = "User ID: " + String(user.userId)
         bodyLabel.text = "Body: " + user.body
         titleLabel.text = "Title: " + user.title
     }
-    
-
 }
+
+

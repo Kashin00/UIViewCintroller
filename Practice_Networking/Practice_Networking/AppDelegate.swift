@@ -13,23 +13,9 @@ import BackgroundTasks
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let bgTaskIdentifier = "id"
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: bgTaskIdentifier, using: nil) { (task) in
-            let request = BGAppRefreshTaskRequest(identifier: self.bgTaskIdentifier)
-            request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60)
-            
-            do {
-                try BGTaskScheduler.shared.submit(request)
-            } catch {
-                print("Could not schedule app refresh")
-            }
-
-        }
-        
         return true
     }
 

@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet private weak var button: UIButton!
-    private var userArray = [Users]()
+    private var dataArray = [DecodeModel]()
+    private let stringUrl = "https://jsonplaceholder.typicode.com/posts"
+    private let userMessage = UserMessage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +23,12 @@ class ViewController: UIViewController {
     @IBAction func allDataDidPressed(_ sender: Any) {
         guard let allDataVC = self.storyboard?.instantiateViewController(identifier: String(describing: AllDataViewController.self)) as? AllDataViewController else {return}
         
-        allDataVC.userArray = userArray
+        allDataVC.modelArray = dataArray
         navigationController?.pushViewController(allDataVC, animated: true)
     }
     
     @IBAction func getDidPressed(_ sender: Any) {
-//        callGetRequest()
-        jsonDecoder()
+        callGetRequest()
     }
     
     @IBAction func postDidPressed(_ sender: Any) {
@@ -37,29 +38,8 @@ class ViewController: UIViewController {
 // MARK: - URLSessions
 private extension ViewController {
     
-    func callGetRequest() {
-        
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
-    
-        let session =  URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
-            guard let response = response,
-                  let data = data else { return }
-            
-            print(response)
-            print(data)
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            } catch {
-                print(error)
-            }
-        }.resume()
-    }
-    
     func callPostRequest() {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: stringUrl) else { return }
 
         let userData = ["Course": "Networking", "Task":"Get and Post Request"]
         
@@ -81,28 +61,31 @@ private extension ViewController {
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
             }catch {
-                print(error)
+                self.errorAlert(error: error)
             }
         }.resume()
     }
     
     
-    func jsonDecoder() {
+    func callGetRequest() {
 
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string:stringUrl) else { return }
 
         URLSession.shared.dataTask(with: url) { (data, response, eroor) in
             guard let data = data else { return }
 
             do {
-                let users = try JSONDecoder().decode([Users].self, from: data)
-
-                users.forEach {
-                    self.userArray.append($0)
-                }
+                self.dataArray = try JSONDecoder().decode([DecodeModel].self, from: data)
             } catch {
-                print("Error: \(error)")
+                self.errorAlert(error: error)
             }
         }.resume()
+    }
+
+    func errorAlert(error: Error) {
+        
+        let alert = UIAlertController(title: userMessage.error, message: "\(error)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: userMessage.cancel, style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -14,6 +14,9 @@ class UploadPhotoViewController: UIViewController {
     @IBOutlet weak private var uploadButton: UIButton!
     private var imagePicker = UIImagePickerController()
     private let clientId = "5af4a79c42ea7df"
+    private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+    private let userMessage = UserMessage()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,6 @@ class UploadPhotoViewController: UIViewController {
         imagePicker.delegate = self
         uploadButton.isHidden = true
     }
-    
-
    
     @IBAction func selectImageDidPressed(_ sender: Any) {
         uploadPhotoAlert()
@@ -32,8 +33,6 @@ class UploadPhotoViewController: UIViewController {
         
         uploadImageToImgur(image: selectedPhotoImageView.image ?? UIImage(named: "")!)
     }
-    
-    
 }
 
 // MARK: - UIImagePickerControllerDelegate
@@ -42,12 +41,21 @@ extension UploadPhotoViewController: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[.originalImage] as? UIImage {
-            selectedPhotoImageView.image = image
-            self.uploadButton.isHidden = false
+            
+            let imageData = image.jpegData(compressionQuality: 1.0)
+            let qualityLim = 10000000.0
+            
+            guard let data = imageData else { return }
+            
+            if Double(data.count) < qualityLim {
+
+                selectedPhotoImageView.image = image
+                self.uploadButton.isHidden = false
+            }
         }
+        self.registerBackgroundTask()
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension UIAlertController {
@@ -62,8 +70,8 @@ extension UIAlertController {
 
 private extension UploadPhotoViewController {
     func uploadPhotoAlert() {
-        let alert = UIAlertController(title: "Upload photo", message: "", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Photo by gallery", style: .default, handler: { _ in
+        let alert = UIAlertController(title: userMessage.uploadPhoto, message: "", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: userMessage.byGallery, style: .default, handler: { _ in
             
             self.imagePicker.sourceType = .photoLibrary
             self.imagePicker.allowsEditing = true
@@ -71,12 +79,12 @@ private extension UploadPhotoViewController {
             self.present(self.imagePicker, animated: true, completion: nil)
             
         }))
-        alert.addAction(UIAlertAction(title: "By camera", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: userMessage.byCam, style: .default, handler: { _ in
             self.imagePicker.sourceType = .camera
             self.imagePicker.allowsEditing = true
             self.present(self.imagePicker, animated: true, completion: nil)
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: userMessage.cancel, style: .cancel, handler: nil))
         alert.pruneNegativeWidthConstraints()
         present(alert, animated: true, completion: nil)
     }
@@ -98,6 +106,20 @@ private extension UploadPhotoViewController {
                      let postData = body.data(using: .utf8)
 
                      request.httpBody = postData
+
+            URLSession.shared.dataTask(with: request) { (data, response, erroe) in
+                guard let response = response,
+                      let data = data else { return }
+                print(response)
+                
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    print(json)
+                }catch {
+                    self.errorAlert(error: error)
+                }
+                self.endBackgroundTask()
+            }.resume()
         }
     }
     
@@ -108,4 +130,23 @@ private extension UploadPhotoViewController {
                 complete(base64Image)
             }
         }
+    
+    func registerBackgroundTask() {
+      backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+        self?.endBackgroundTask()
+      }
+      assert(backgroundTask != .invalid)
+    }
+      
+    func endBackgroundTask() {
+      UIApplication.shared.endBackgroundTask(backgroundTask)
+      backgroundTask = .invalid
+    }
+    
+    func errorAlert(error: Error) {
+        
+        let alert = UIAlertController(title: userMessage.error, message: "\(error)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: userMessage.cancel, style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }

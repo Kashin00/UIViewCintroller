@@ -8,15 +8,9 @@
 
 import Foundation
 
-struct Users: Codable {
+struct DecodeModel: Codable {
     var body: String
     var id: Int
     var title: String
     var userId: Int
-}
-struct TestModel {
-    var a:String
-    var b:String
-    var c:String
-    var d:String
 }
