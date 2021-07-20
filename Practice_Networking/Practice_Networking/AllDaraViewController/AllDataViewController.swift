@@ -10,7 +10,7 @@ import UIKit
 
 class AllDataViewController: UIViewController {
 
-    @IBOutlet weak var dataTableView: UITableView!
+    @IBOutlet weak private var dataTableView: UITableView!
     
     private let heightForRow = CGFloat(140)
     public var modelArray = [DecodeModel]()

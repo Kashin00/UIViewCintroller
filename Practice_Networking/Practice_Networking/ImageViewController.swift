@@ -23,12 +23,9 @@ class ImageViewController: UIViewController {
         downloadImage()
     }
 
-
     private func downloadImage() {
-        
         guard let url = URL(string: "https://i.imgur.com/9GowuyL.jpeg") else {return}
-        let session = URLSession.shared
-        session.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data, let image = UIImage(data: data) {
 
                 DispatchQueue.main.async {
@@ -37,7 +34,5 @@ class ImageViewController: UIViewController {
                 }
             }
         }.resume()
-        
     }
-
 }

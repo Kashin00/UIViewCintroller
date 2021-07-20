@@ -8,9 +8,14 @@
 
 import Foundation
 
-struct DecodeModel: Codable {
+public struct DecodeModel: Codable {
     var body: String
     var id: Int
     var title: String
     var userId: Int
+}
+
+
+public enum RequestType: String {
+    case get, post, head, put, delete
 }

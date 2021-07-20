@@ -16,6 +16,7 @@ class UploadPhotoViewController: UIViewController {
     private let clientId = "5af4a79c42ea7df"
     private var backgroundTask: UIBackgroundTaskIdentifier = .invalid
     private let userMessage = UserMessage()
+    private let requestURL = URL(string: "https://api.imgur.com/3/image") ??  URL(string: "")!
 
     
     override func viewDidLoad() {
@@ -94,9 +95,9 @@ private extension UploadPhotoViewController {
         getBase64Image(image: image) { base64Image in
             let boundary = "Boundary-\(UUID().uuidString)"
 
-                     var request = URLRequest(url: URL(string: "https://api.imgur.com/3/image")!)
+            var request = URLRequest(url: self.requestURL)
                      request.addValue("Client-ID \(self.clientId)", forHTTPHeaderField: "Authorization")
-                     request.httpMethod = "POST"
+            request.httpMethod = RequestType.post.rawValue
 
                      var body = ""
                      body += "--\(boundary)\r\n"
